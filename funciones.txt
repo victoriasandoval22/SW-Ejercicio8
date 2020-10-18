@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones con método burbuja</title>
+</head>
+<body>
+    <script>
+        arreglo = parseInt(prompt("Tamaño del arreglo:  "));
+            vec1 = new Array(arreglo); 
+    
+            for(var i=0; i<arreglo; i++){
+                num= parseInt(prompt("Ingresar números:  " + i ));
+                vec1[i] = num;
+                function comparar(a,b){
+                    return a-b; 
+                }
+                function comparar1(a,b){
+                    return b-a;
+                }
+            }
+    
+            document.write("El arreglo es de: " + arreglo + "<br> <br>" );
+            document.write("Se ingresaron los números: "+vec1+"<br> <br>"); 
+
+            function ascendente(){
+                alert("Ascendente: " + vec1.sort(comparar));
+            }
+
+            function descendente(){
+                alert("Descendente: " + vec1.sort(comparar1));
+            }
+        
+    </script>  
+        <input type="submit" value="Orden Ascendente" onclick="ascendente()">
+        
+        <input type="submit" value="Orden Descendente" onclick="descendente()">
+</body>
+</html>
